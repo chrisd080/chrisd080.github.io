@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Assignment 1</title>
+
+    <!-- creates links between the diifferent fils (css and javasript)-->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="js.js"> 
+
+    <!-- This is the file containing the important information for the jquery slideshow to run -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <header><strong>World Wild-life Fund</strong></header>
+
+    <!-- navigation bar -->
+    <div class="topnav">
+        <a href="#Our work">Our work</a>
+        <a href="#People">People</a>
+        <a href="#Places">Places</a>
+        <a href="#Wildlife">Wildlife</a>
+      </div> 
+
+<!-- slideshow box and images -->
+      <div id="slideshow">
+        <div>
+          <img src="1.jpg" style="width:1480px; height:500px;"/>
+        </div>
+        <div>
+          <img src="2.jpg" style="width:1480px; height:500px;"/>
+        </div>
+        <div>
+          <img src="3.jpg" style="width:1480px; height:500px;"/>
+        </div>
+        <div>
+          <img src="4.jpg" style="width:1480px; height:500px;"/>
+        </div>
+     </div>
+
+     <!-- Setting for slideshow - must be included in index page as well as a linked file so the browser knows how and where to run the script-->
+     <script>
+      $("#slideshow > div:gt(0)").hide();
+
+setInterval(function() {
+$('#slideshow > div:first')
+  .fadeOut(1000)
+  .next()
+  .fadeIn(1000)
+  .end()
+  .appendTo('#slideshow');
+}, 3000);
+    </script>
+ 
+      <br>
+      
+      <p><strong><strong><strong>Our mission is to conserve nature and reduce the most pressing threats to the diversity of life on Earth.</strong></strong></strong></p>
+      
+      <br>
+      
+      <p>We organize our work around these six areas:</p>
+      
+      <!-- The links for external pages -->
+      <div id="picbox">
+        <a href="https://www.worldwildlife.org/initiatives/food">Food</a>
+        <a href="https://www.worldwildlife.org/initiatives/climate">Climate</a>
+        <a href="#https://www.worldwildlife.org/initiatives/freshwater">Freshwater</a>
+        <a href="#https://www.worldwildlife.org/initiatives/wildlife-conservation">Wildlife</a>
+        <a href="#https://www.worldwildlife.org/initiatives/forests">Forests</a>
+        <a href="https://www.worldwildlife.org/initiatives/oceans">Oceans</strong></a>
+      </div>
+
+ <!-- individual boxes for the Circular images for the links above-->
+    <div id="food">
+            <img src="food.jpg"  style="width:100px; height:100px; border-radius: 50px;" /> 
+    </div>
+
+    <div id="climate">
+        <img src="climate.jpg"  style="width:100px; height:100px; border-radius: 50px;" /> 
+    </div>
+
+    <div id="freshwater">
+        <img src="freshwater.jpg"  style="width:100px; height:100px; border-radius: 50px;" /> 
+    </div>
+
+    <div id="wildlife">
+        <img src="wildlife.jpg"  style="width:100px; height:100px; border-radius: 50px; " /> 
+    </div>
+
+    <div id="forests">
+        <img src="forests.jpg"  style="width:100px; height:100px; border-radius: 50px;" /> 
+    </div>
+
+    <div id="oceans">
+        <img src="oceans.jpg"  style="width:100px; height:100px; border-radius: 50px;" /> 
+    </div>
+
+<br><br>
+    
+  <!--This is the main body box that holds the news articles-->
+    <div class="container">
+
+    <!-- different individual boxes inside the container to resize each image without changing all at once-->  
+      <div id="planet">  
+    <a href="https://www.worldwildlife.org/stories/a-call-to-stop-the-next-pandemic">
+    <img  src="planet.jpg" style="width:600px; height:350px; border-radius: 25px;"/> <h1>Natures call for pandemics</h1>
+    </a>
+  </div>
+
+  <div id="pollution">  
+    <a href="https://support.worldwildlife.org/site/Advocacy?cmd=display&page=UserAction&id=1002&_ga=2.192750377.282679771.1594779367-485681036.1594779367">
+    <img  src="pollution.jpg" style="width:300px; height:360px; border-radius: 25px;"/> <h2>Lets stop the pollution!</h2>
+    </a>
+  </div>
+
+  <div id="adopt">  
+    <a href="https://support.worldwildlife.org/site/Donation2?df_id=15397&15397.donation=form1&s_src=AWS2010OQ18319A04084RX&_ga=2.146737207.282679771.1594779367-485681036.1594779367">
+    <img  src="adopt.jpg" style="width:200px; height:210px; border-radius: 25px;"/> <h6>Adopt as a pet now!</h6>
+    </a>
+  </div>
+
+  <div id="gifts">  
+    <a href="https://support.worldwildlife.org/site/SPageServer/?pagename=summergiftideas&s_src=AWY2011OQ18319A04165RX&_ga=2.252504714.282679771.1594779367-485681036.1594779367">
+    <img  src="gifts.jpg" style="width:200px; height:210px; border-radius: 25px;"/> <h6>Come buy our clothes</h6>
+    </a>
+  </div>
+
+  <div id="crisis">  
+    <a href="https://www.worldwildlife.org/stories/the-snaring-crisis-in-southeast-asia">
+    <img  src="crisis.jpg" style="width:450px; height:210px; border-radius: 25px;"/> <h5>The crisis in South-east Asia</h5>
+    </a>
+  </div>
+
+  <div id="pandemic">  
+    <a href="https://www.politico.com/news/agenda/2020/05/15/how-to-stop-the-next-pandemic-260946">
+    <img  src="pandemic.jpg" style="width:450px; height:280px; border-radius: 25px;"/> <h4>Stopping the next pandemic</h4>
+    </a>
+  </div>
+
+  <div id="injustice">
+    <a href="https://www.worldwildlife.org/pages/wwf-speaks-out-on-racial-injustice">
+    <img  src="injustice.jpg" style="width:450px; height:290px; border-radius: 25px;"/> <h3>How we are supporting racial injustice</h3>
+    </a>
+  </div>
+
+</div>
+
+    <div id="footer">
+        <p>© 2020 World Wildlife Fund</p>
+    </div>
+
+
+</body>
+</html>
